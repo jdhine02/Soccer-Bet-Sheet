@@ -1,0 +1,162 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>EPL · GW33 · Home</title><link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@700;800;900&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@600&display=swap" rel="stylesheet"><style>
+:root{--epl:#38003c;--cyn:#00ff85;--red:#c0392b;--gold:#C8960C;--slate:#4A6FA5;
+--green:#1a7a3a;--orange:#C47D00;--bg:#f5f6fa;--card:#fff;
+--bd:#e0e4ed;--text:#1a1d2e;--dim:#6b7280;
+--cond:'Barlow Condensed',sans-serif;--mono:'JetBrains Mono',monospace;
+--body:'Inter','Segoe UI',sans-serif}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:var(--body);background:var(--bg);color:var(--text);font-size:13px}
+a{color:inherit;text-decoration:none}
+.wrap{max-width:1500px;margin:0 auto;padding:8px 12px}
+.hdr{background:linear-gradient(135deg,var(--epl),#5a006b);color:#fff;padding:10px 16px;display:flex;align-items:center;justify-content:space-between}
+.htitle{font-family:var(--cond);font-size:26px;font-weight:800}
+.hsub{font-size:10px;opacity:.8;margin-top:1px}
+.hbadge{background:var(--cyn);color:var(--epl);border-radius:20px;padding:3px 10px;font-size:10px;font-weight:700}
+.datebar{background:var(--cyn);color:var(--epl);font-family:var(--cond);font-weight:800;font-size:12px;letter-spacing:.08em;text-align:center;padding:5px 0;margin-bottom:4px}
+.tabs{display:flex;gap:3px;margin-bottom:8px;margin-top:3px}
+.tab{padding:6px 14px;border-radius:6px 6px 0 0;font-weight:600;font-size:12px;border:1px solid var(--bd);border-bottom:none;background:#e8eaf0;color:var(--dim);display:inline-block}
+.tab.active{background:var(--epl);color:#fff;border-color:var(--epl)}
+.legend{background:#f0f4ff;border:1px solid var(--bd);border-radius:6px;padding:7px 12px;margin-bottom:8px;font-size:10px}
+.legend-title{font-family:var(--cond);font-size:13px;font-weight:800;color:var(--epl);margin-bottom:5px}
+.legend-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:3px 12px}
+.legend-item{display:flex;gap:5px;align-items:center}
+.legend-key{font-weight:700;color:var(--epl);white-space:nowrap;font-size:10px}
+.legend-val{color:var(--dim);font-size:9px}
+.sec{font-family:var(--cond);font-size:12px;font-weight:700;letter-spacing:.5px;text-transform:uppercase;padding:3px 8px;border-radius:4px;margin:6px 0 3px;color:#fff}
+.sn{background:var(--epl)}.sr{background:var(--red)}.sgs{background:var(--green)}
+table{width:100%;border-collapse:collapse;font-size:11px;margin-bottom:4px}
+th{background:var(--epl);color:#fff;padding:4px 6px;text-align:left;font-size:10px;font-weight:700;text-transform:uppercase;white-space:nowrap}
+th.r,td.r{text-align:right}th.c,td.c{text-align:center}
+td{padding:3px 6px;border-bottom:1px solid var(--bd);vertical-align:middle}
+tr:nth-child(even) td{background:#f8f9fc}tr:hover td{background:#eef1f8}
+.mono{font-family:var(--mono);font-weight:600}
+.epl-c{color:var(--epl)}.red{color:var(--red)}.green{color:var(--green)}.dim{color:var(--dim)}
+.s3{color:var(--gold);font-size:11px}.s2{color:var(--slate);font-size:10px}
+.sk{display:inline-block;padding:1px 5px;border-radius:8px;font-size:9px;font-weight:700;white-space:nowrap}
+.sk-g{background:#dcfce7;color:#166534}.sk-s{background:#dbeafe;color:#1e40af}
+.sk-sh{background:#f3e8ff;color:#6b21a8}.sk-cold{background:#fee2e2;color:#991b1b}
+.l10p{display:inline-block;padding:1px 5px;border-radius:8px;font-size:10px;font-weight:700}
+.l10-hot{background:#dcfce7;color:#166534}.l10-warm{background:#fef9c3;color:#854d0e}
+.l10-cold{background:#fee2e2;color:#991b1b}.l10-mid{background:#f1f5f9;color:#475569}
+.mom-up{color:var(--green);font-weight:700;font-size:10px}
+.mom-dn{color:var(--red);font-weight:700;font-size:10px}
+.mom-st{color:var(--dim);font-size:10px}
+.gc{background:var(--card);border:1px solid var(--bd);border-radius:8px;margin-bottom:10px;overflow:hidden;box-shadow:0 1px 3px rgba(0,0,0,.05)}
+.gc-hdr{display:flex;align-items:center;justify-content:space-between;padding:7px 12px;background:linear-gradient(90deg,var(--epl),#5a006b);color:#fff}
+.gc-title{font-family:var(--cond);font-size:19px;font-weight:800}
+.gc-meta{font-size:9px;opacity:.75;margin-top:1px}
+.gc-grade{font-family:var(--cond);font-size:15px;font-weight:900;padding:3px 10px;border-radius:6px;margin-left:8px}
+.gc-body{padding:8px 10px}
+.wx{display:flex;gap:8px;align-items:center;background:#f0f4ff;border-radius:5px;padding:4px 8px;margin-bottom:5px;font-size:10px;flex-wrap:wrap}
+.odds-bar{display:flex;gap:5px;align-items:center;background:#f8f9fc;border:1px solid var(--bd);border-radius:5px;padding:5px 9px;margin-bottom:5px;flex-wrap:wrap}
+.ob-lbl{font-size:10px;font-weight:700;color:var(--dim);margin-right:2px;flex-shrink:0}
+.op{border-radius:4px;padding:3px 8px;font-size:11px;font-weight:700;font-family:var(--mono);border:1px solid transparent;white-space:nowrap}
+.op-fav{background:#dcfce7;color:#166534;border-color:#86efac}
+.op-draw{background:#f1f5f9;color:#475569;border-color:#cbd5e1}
+.op-dog{background:#f8f9fc;color:#6b7280;border-color:#e2e8f0}
+.op-over{background:#dcfce7;color:#166534;border-color:#86efac}
+.op-under{background:#fee2e2;color:#991b1b;border-color:#fca5a5}
+.op-btts-y{background:#dbeafe;color:#1e40af;border-color:#93c5fd}
+.op-btts-n{background:#fef3c7;color:#92400e;border-color:#fcd34d}
+.op-tbd{background:#f8f9fc;color:#9ca3af;border-color:#e2e8f0;font-size:9px}
+.op-dc{background:#f3e8ff;color:#6b21a8;border-color:#d8b4fe}
+.ob-div{color:#d1d5db;font-size:12px;padding:0 2px}
+.dc-bar{display:flex;gap:5px;align-items:center;background:#faf5ff;border:1px solid #d8b4fe;border-radius:5px;padding:4px 9px;margin-bottom:5px;flex-wrap:wrap}
+.xg-row{display:grid;grid-template-columns:repeat(4,1fr);gap:5px;margin-bottom:5px}
+.xg-box{background:#f8f9fc;border:1px solid var(--bd);border-radius:5px;padding:5px 7px;text-align:center}
+.xg-lbl{font-size:9px;font-weight:700;text-transform:uppercase;color:var(--dim);margin-bottom:2px}
+.xg-val{font-family:var(--cond);font-size:15px;font-weight:900;color:var(--epl)}
+.xg-sub{font-size:9px;color:var(--dim);margin-top:1px}
+.xi-grid{display:grid;grid-template-columns:1fr 1fr;gap:6px;margin-bottom:5px}
+.xi-box{background:#f8f9fc;border:1px solid var(--bd);border-radius:5px;overflow:hidden}
+.xi-hdr{padding:5px 8px;font-family:var(--cond);font-size:13px;font-weight:800;display:flex;align-items:center;justify-content:space-between;color:#fff}
+.xi-hdr-h{background:var(--green)}.xi-hdr-a{background:var(--slate)}
+.xi-sub{font-size:11px;opacity:.90;font-weight:600}
+.xi-conf{font-size:9px;background:var(--cyn);color:var(--epl);padding:0 4px;border-radius:3px;font-weight:700;margin-left:4px}
+.xi-pred{font-size:9px;color:rgba(255,255,255,.6);margin-left:4px}
+.xi-out{font-size:9px;color:var(--red);padding:2px 8px;background:#fff5f5}
+.xi-dbt{font-size:9px;color:var(--orange);padding:2px 8px;background:#fffbeb}
+.xi-tbl{width:100%;border-collapse:collapse;font-size:10px}
+.xi-tbl th{background:rgba(0,0,0,.06);color:var(--dim);padding:2px 5px;font-size:9px;font-weight:700;text-transform:uppercase}
+.xi-tbl td{padding:2px 5px;border-bottom:1px solid var(--bd)}
+.xi-tbl tr:last-child td{border-bottom:none}
+.xi-tbl tr:hover td{background:#eef1f8}
+.xi-tbl tr.gk-row td{background:#fef9e8!important;border-bottom:2px solid var(--bd)}
+.pos{display:inline-block;background:#e8eaf0;border-radius:3px;padding:0 4px;font-size:9px;font-weight:700;color:var(--dim);min-width:28px;text-align:center}
+.pos-gk{background:#fef3c7;color:#92400e}.pos-def{background:#dbeafe;color:#1e40af}
+.pos-mid{background:#dcfce7;color:#166534}.pos-fwd{background:#fee2e2;color:#991b1b}
+.play-box{border-radius:5px;padding:6px 9px;margin:5px 0;font-size:11px}
+.pb-play{background:#dcfce7;border:1px solid #86efac}
+.pb-val{background:#dbeafe;border:1px solid #93c5fd}
+.pb-dc{background:#f3e8ff;border:1px solid #d8b4fe}
+.pb-caut{background:#fef9c3;border:1px solid #fde047}
+.play-lbl{font-weight:800;font-size:12px;margin-bottom:2px}
+.play-why{color:#374151;line-height:1.55;font-size:11px}
+.bet-row{display:flex;align-items:center;gap:6px;padding:4px 7px;background:#f8f9fc;border-radius:4px;margin-bottom:3px;border-left:3px solid var(--epl)}
+.bet-type{font-size:9px;font-weight:700;text-transform:uppercase;color:var(--dim);width:70px;flex-shrink:0}
+.bet-pick{font-family:var(--cond);font-size:13px;font-weight:800;color:var(--text);flex:1}
+.bet-odds{font-family:var(--mono);font-size:11px;color:var(--slate)}
+.bet-unit{font-family:var(--cond);font-size:11px;font-weight:700;padding:1px 6px;border-radius:4px}
+.bu3{background:#fff3cd;color:#856404}.bu2{background:#dcfce7;color:#166534}
+.bu1{background:#dbeafe;color:#1e40af}.bu05{background:#f1f5f9;color:#6b7280;border:1px solid #e2e8f0}
+.prop-section{margin-top:6px}
+.prop-cols{display:grid;grid-template-columns:1fr 1fr;gap:6px}
+.prop-col-hdr{font-family:var(--cond);font-size:11px;font-weight:800;padding:3px 7px;border-radius:4px 4px 0 0;color:#fff}
+.pch-home{background:var(--green)}.pch-away{background:var(--slate)}
+.prop-list{background:#f8f9fc;border:1px solid var(--bd);border-radius:0 0 4px 4px;padding:5px 7px}
+.prop-item{display:flex;align-items:center;gap:6px;padding:4px 0;border-bottom:1px solid var(--bd)}
+.prop-item:last-child{border-bottom:none}
+.ptag{display:inline-block;font-family:var(--cond);font-size:10px;font-weight:800;padding:1px 5px;border-radius:3px;width:32px;text-align:center;flex-shrink:0}
+.pt-sc{background:#dcfce7;color:#166534}.pt-sot{background:#dbeafe;color:#1e40af}
+.pt-sh{background:#f3e8ff;color:#6b21a8}
+.pi-name{font-family:var(--cond);font-size:12px;font-weight:800;flex:1}
+.pi-odds{font-family:var(--mono);font-size:10px;color:var(--slate)}
+.pi-right{display:flex;flex-direction:column;align-items:flex-end;gap:1px;flex-shrink:0}
+.pi-l10{font-family:var(--mono);font-size:10px;padding:0 4px;border-radius:3px}
+.pi-stars{font-size:10px;color:var(--gold)}
+.par-grid{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-bottom:8px}
+.par-card{border-radius:7px;padding:9px 11px;border:1px solid var(--bd)}
+.par-safe{background:linear-gradient(135deg,#dcfce7,#f0fdf4);border-color:#86efac}
+.par-big{background:linear-gradient(135deg,#fef3c7,#fffbeb);border-color:#fde68a}
+.par-lbl{font-family:var(--cond);font-size:10px;font-weight:700;text-transform:uppercase;color:var(--dim)}
+.par-odds{font-family:var(--cond);font-size:22px;font-weight:900;color:var(--epl)}
+.par-detail{font-size:10px;margin-top:3px;line-height:1.7}
+.hero-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-bottom:8px}
+.hero{border-radius:7px;padding:9px 11px;border:2px solid var(--epl);background:#f0f4ff}
+.hero-lbl{font-size:9px;font-weight:700;text-transform:uppercase;color:var(--dim);margin-bottom:2px}
+.hero-name{font-family:var(--cond);font-size:16px;font-weight:900;color:var(--epl)}
+.hero-pct{font-family:var(--cond);font-size:17px;font-weight:900;color:var(--green)}
+.hero-detail{font-size:10px;color:var(--dim);margin-top:2px;line-height:1.5}
+.fd-wrap{display:flex;gap:2px;margin-top:3px}
+.fd{width:15px;height:15px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:7px;font-weight:700;color:#fff}
+.fw{background:var(--green)}.fd-d{background:#999}.fl{background:var(--red)}
+.res-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin-bottom:8px}
+.res-card{background:var(--card);border:1px solid var(--bd);border-radius:7px;padding:10px 12px}
+.res-period{font-size:9px;font-weight:700;text-transform:uppercase;color:var(--dim);margin-bottom:4px}
+.res-record{font-family:var(--cond);font-size:22px;font-weight:900}
+.sum-row{cursor:pointer}.sum-row:hover td{background:#e8f0ff!important}
+.w-row td{background:#f0fdf4!important}.l-row td{background:#fff5f5!important}
+</style><script>
+document.addEventListener('DOMContentLoaded',function(){
+  var el=document.getElementById('sheet-date');
+  if(el){var d=new Date();el.textContent=d.toLocaleDateString('en-US',{weekday:'long',year:'numeric',month:'long',day:'numeric'}).toUpperCase();}
+});
+</script></head><body><div class="wrap"><div class="hdr"><div><div class="htitle">⚽ EPL BET SHEET</div><div class="hsub">GW33 · April 19–22, 2026 · 11 MATCHES · v4.0</div></div><div class="hbadge">Live Data</div></div><div class="datebar" id="sheet-date">LOADING...</div><div class="tabs"><a href="index.html" class="tab active">🏠 Home</a><a href="tab1.html" class="tab">📊 Overview</a><a href="tab2.html" class="tab">⚽ G1–5</a><a href="tab3.html" class="tab">⚽ G6–11</a><a href="tab4.html" class="tab">📋 Results</a></div><div class="legend"><div class="legend-title">📖 How to Read This Sheet</div>
+<div class="legend-grid">
+<div class="legend-item"><span class="legend-key">L10</span><span class="legend-val">Last 10 apps hitting prop — green 8+, yellow 6-7, red ≤4</span></div>
+<div class="legend-item"><span class="sk sk-g">⚽2G</span><span class="legend-val" style="margin-left:4px">Scored in last 2+ straight</span></div>
+<div class="legend-item"><span class="sk sk-s">🎯3G</span><span class="legend-val" style="margin-left:4px">SOT in last 3+ straight</span></div>
+<div class="legend-item"><span class="sk sk-cold">❄️</span><span class="legend-val" style="margin-left:4px">0 streak + L10 ≤3 — avoid</span></div>
+<div class="legend-item"><span style="background:#dcfce7;color:#166534;padding:1px 6px;border-radius:4px;font-weight:700;font-size:10px">+150</span><span class="legend-val" style="margin-left:4px">EPL green = recommended ML</span></div>
+<div class="legend-item"><span style="background:#dcfce7;color:#166534;padding:1px 6px;border-radius:4px;font-weight:700;font-size:10px">Over</span><span class="legend-val" style="margin-left:4px">Green = Over lean</span></div>
+<div class="legend-item"><span style="background:#fee2e2;color:#991b1b;padding:1px 6px;border-radius:4px;font-weight:700;font-size:10px">Under</span><span class="legend-val" style="margin-left:4px">Red = Under lean</span></div>
+<div class="legend-item"><span style="background:#f3e8ff;color:#6b21a8;padding:1px 6px;border-radius:4px;font-weight:700;font-size:10px">DC</span><span class="legend-val" style="margin-left:4px">Purple = Double Chance</span></div>
+<div class="legend-item"><span class="legend-key">★★★</span><span class="legend-val">70%+ confidence — full unit</span></div>
+<div class="legend-item"><span class="legend-key">★★</span><span class="legend-val">62–69% — standard unit</span></div>
+<div class="legend-item"><span class="legend-key">★</span><span class="legend-val">55–61% — small only</span></div>
+<div class="legend-item"><span class="legend-key">$(u)</span><span class="legend-val">$2(2u) = 2× base stake</span></div>
+<div class="legend-item"><span class="legend-key">xG</span><span class="legend-val">Expected goals — GF/G avg vs opp GA/G avg</span></div>
+<div class="legend-item"><span class="legend-key">BTTS%</span><span class="legend-val">Both teams to score rate this season</span></div>
+<div class="legend-item"><span class="legend-key">GA/90</span><span class="legend-val">GK goals allowed per 90 — silent model input</span></div>
+<div class="legend-item"><span class="legend-key">DC</span><span class="legend-val">Double Chance — win + draw in one bet</span></div>
+</div></div><div style="display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-bottom:10px"><div class="gc" style="margin-bottom:0"><div class="gc-hdr"><div><div class="gc-title">GW33 · April 19–22, 2026</div><div class="gc-meta">Sat–Tue · 11 matches</div></div></div><div class="gc-body" style="font-size:11px;line-height:2"><strong>Sat Apr 19</strong> Brentford vs Fulham<br><strong>Sat Apr 19</strong> Newcastle United vs Bournemouth<br><strong>Sat Apr 19</strong> Leeds United vs Wolverhampton Wanderers<br><strong>Sat Apr 19</strong> Tottenham Hotspur vs Brighton and Hove Albion<br><strong>Sat Apr 19</strong> Chelsea vs Manchester United<br><strong>Sun Apr 20</strong> Aston Villa vs Sunderland<br><strong>Sun Apr 20</strong> Nottingham Forest vs Burnley<br><strong>Sun Apr 20</strong> Everton vs Liverpool<br><strong>Sun Apr 20</strong> Manchester City vs Arsenal<br><strong>Mon Apr 21</strong> Crystal Palace vs West Ham United<br><strong>Tue Apr 22</strong> Brighton and Hove Albion vs Chelsea<br></div></div><div class="gc" style="margin-bottom:0"><div class="gc-hdr"><div><div class="gc-title">⚡ Quick Picks</div></div></div><div class="gc-body" style="font-size:11px;line-height:2"><strong style="color:var(--green)">✅ PLAYS:</strong> Newcastle +105 · Chelsea BTTS Yes -215 · Man City -120<br><strong style="color:var(--epl)">★★★ Props:</strong> Semenyo Anytime +150 · Gibbs-White SOT 1+ · Palmer SOT 1+<br><strong style="color:#6b21a8">🎯 DC:</strong> Brighton or Draw vs Spurs -182<br><strong style="color:var(--gold)">💣 Big Parlay:</strong> City + Semenyo Any + Gibbs-White SOT + Brighton DC + Chelsea BTTS ~+750<br><span style="color:var(--dim);font-size:10px">⚠ O/U + Mon/Tue props update via pipeline re-run</span></div></div></div><div style="display:flex;gap:8px;flex-wrap:wrap"><a href="tab1.html" style="background:var(--epl);color:#fff;font-family:var(--cond);font-weight:900;font-size:13px;padding:9px 18px;border-radius:6px">📊 Overview</a><a href="tab2.html" style="background:var(--green);color:#fff;font-family:var(--cond);font-weight:900;font-size:13px;padding:9px 18px;border-radius:6px">⚽ Games 1–5</a><a href="tab3.html" style="background:var(--slate);color:#fff;font-family:var(--cond);font-weight:900;font-size:13px;padding:9px 18px;border-radius:6px">⚽ Games 6–11</a><a href="tab4.html" style="background:var(--gold);color:#fff;font-family:var(--cond);font-weight:900;font-size:13px;padding:9px 18px;border-radius:6px">📋 Results</a></div></div></body></html>
