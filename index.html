@@ -76,9 +76,9 @@ tr:nth-child(even) td{background:#f8f9fc}tr:hover td{background:#eef1f8}
 .xi-pred{font-size:9px;color:rgba(255,255,255,.6);margin-left:4px}
 .xi-out{font-size:9px;color:var(--red);padding:2px 8px;background:#fff5f5}
 .xi-dbt{font-size:9px;color:var(--orange);padding:2px 8px;background:#fffbeb}
-.xi-tbl{width:100%;border-collapse:collapse;font-size:11px}
-.xi-tbl th{background:rgba(0,0,0,.06);color:var(--dim);padding:3px 5px;font-size:9px;font-weight:700;text-transform:uppercase;white-space:nowrap}
-.xi-tbl td{padding:3px 5px;border-bottom:1px solid var(--bd);vertical-align:middle}
+.xi-tbl{width:100%;border-collapse:collapse;font-size:12px}
+.xi-tbl th{background:rgba(0,0,0,.06);color:var(--dim);padding:4px 5px;font-size:10px;font-weight:700;text-transform:uppercase;white-space:nowrap}
+.xi-tbl td{padding:4px 5px;border-bottom:1px solid var(--bd);vertical-align:middle}
 .xi-tbl tr:last-child td{border-bottom:none}
 .xi-tbl tr:hover td{background:#eef1f8}
 .xi-tbl tr.gk-row td{background:#fef9e8!important;border-bottom:2px solid var(--bd)}
@@ -89,7 +89,7 @@ border-radius:6px;padding:7px 10px;margin-bottom:5px}
 .gk-team{font-size:10px;color:var(--dim);margin-bottom:4px}
 .gk-stats{display:flex;flex-wrap:wrap;gap:4px;margin-top:4px}
 .gk-st{background:#fff;border:1px solid #fde68a;border-radius:4px;
-padding:2px 7px;font-size:10px;font-weight:700;color:#92400e;white-space:nowrap}
+padding:3px 8px;font-size:11px;font-weight:700;color:#92400e;white-space:nowrap}
 .gk-st span{color:var(--text);font-family:var(--mono);margin-left:3px}
 .gk-rating{font-family:var(--cond);font-size:13px;font-weight:800;
 padding:2px 8px;border-radius:4px;background:#92400e;color:#fef9e8}
@@ -105,10 +105,10 @@ padding:0 5px;border-radius:3px;font-weight:700}
 .pb-dc{background:#f3e8ff;border:1px solid #d8b4fe}
 .pb-caut{background:#fef9c3;border:1px solid #fde047}
 .play-lbl{font-weight:800;font-size:12px;margin-bottom:2px}
-.play-why{color:#374151;line-height:1.55;font-size:11px}
+.play-why{color:#374151;line-height:1.6;font-size:12px}
 .bet-row{display:flex;align-items:center;gap:6px;padding:4px 7px;background:#f8f9fc;border-radius:4px;margin-bottom:3px;border-left:3px solid var(--epl)}
-.bet-type{font-size:9px;font-weight:700;text-transform:uppercase;color:var(--dim);width:70px;flex-shrink:0}
-.bet-pick{font-family:var(--cond);font-size:13px;font-weight:800;color:var(--text);flex:1}
+.bet-type{font-size:10px;font-weight:700;text-transform:uppercase;color:var(--dim);width:80px;flex-shrink:0}
+.bet-pick{font-family:var(--cond);font-size:15px;font-weight:800;color:var(--text);flex:1}
 .bet-odds{font-family:var(--mono);font-size:11px;color:var(--slate)}
 .bet-unit{font-family:var(--cond);font-size:11px;font-weight:700;padding:1px 6px;border-radius:4px}
 .bu3{background:#fff3cd;color:#856404}.bu2{background:#dcfce7;color:#166534}
@@ -120,11 +120,11 @@ padding:0 5px;border-radius:3px;font-weight:700}
 .form-team-hdr{font-family:var(--cond);font-size:11px;font-weight:800;padding:3px 8px;
 color:#fff;border-radius:4px 4px 0 0;display:flex;justify-content:space-between;align-items:center}
 .form-hdr-h{background:var(--green)}.form-hdr-a{background:var(--slate)}
-.form-tbl{width:100%;border-collapse:collapse;font-size:10px;background:#f8f9fc;
+.form-tbl{width:100%;border-collapse:collapse;font-size:11px;background:#f8f9fc;
 border:1px solid var(--bd);border-radius:0 0 4px 4px}
-.form-tbl th{padding:2px 5px;font-size:8px;font-weight:700;text-transform:uppercase;
+.form-tbl th{padding:3px 5px;font-size:9px;font-weight:700;text-transform:uppercase;
 color:var(--dim);background:rgba(0,0,0,.04);white-space:nowrap}
-.form-tbl td{padding:2px 4px;border-bottom:1px solid var(--bd)}
+.form-tbl td{padding:3px 4px;border-bottom:1px solid var(--bd)}
 .form-tbl tr:last-child td{border-bottom:none}
 .form-tbl tr:hover td{background:#eef1f8}
 /* Per-match result dots in form column */
@@ -199,6 +199,8 @@ document.addEventListener('DOMContentLoaded',function(){
 <div class="legend-item"><span class="legend-key">BTTS%</span><span class="legend-val">Both teams to score rate this season</span></div>
 <div class="legend-item"><span class="legend-key">GA/90</span><span class="legend-val">GK goals allowed per 90 — silent model input</span></div>
 <div class="legend-item"><span class="legend-key">DC</span><span class="legend-val">Double Chance — win + draw in one bet</span></div>
+<div class="legend-item"><span style="background:#1493FF;color:#fff;padding:1px 5px;border-radius:3px;font-size:10px;font-weight:700">+150</span><span class="legend-val" style="margin-left:4px">FD — FanDuel odds</span></div>
+<div class="legend-item"><span style="background:#53A318;color:#fff;padding:1px 5px;border-radius:3px;font-size:10px;font-weight:700">+160</span><span class="legend-val" style="margin-left:4px">Best — best price across 8 books (DK/MGM/CZR/BOL/WH/BR/ESPN)</span></div>
 <div class="legend-item"><span class="fm fm-g">G</span><span class="legend-val" style="margin-left:4px">Player form: Scored in that match</span></div>
 <div class="legend-item"><span class="fm fm-s">S</span><span class="legend-val" style="margin-left:4px">Player form: Shot on target (no goal)</span></div>
 <div class="legend-item"><span class="fm fm-b">·</span><span class="legend-val" style="margin-left:4px">Player form: Shot attempted (off target)</span></div>
